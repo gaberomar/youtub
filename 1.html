@@ -39,7 +39,7 @@ var sv = getParam("sv");
           height: '100%',
             width: '100%',
         videoId: sv,
-         autoPlay: true, 
+         autoPlay: 1, 
           playerVars: {
             'playsinline': 1
           },
@@ -61,7 +61,7 @@ var sv = getParam("sv");
       var done = false;
       function onPlayerStateChange(event) {
         if (event.data == YT.PlayerState.PLAYING && !done) {
-          setTimeout(stopVideo, 6000);
+          setTimeout(stopVideo, 3000);
           done = true;
         }
       }
