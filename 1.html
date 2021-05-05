@@ -36,12 +36,11 @@ var sv = getParam("sv");
       var player;
       function onYouTubeIframeAPIReady() {
         player = new YT.Player('player', {
-          height: '100%',
-            width: '100%',
         videoId: sv,
-         autoPlay: 1, 
-          playerVars: {
-            'playsinline': 1
+	height: '100%',
+        width: '100%',   
+        playerVars: {
+        'playsinline': 1
           },
           events: {
             'onReady': onPlayerReady,
@@ -65,8 +64,8 @@ var sv = getParam("sv");
           done = true;
         }
       }
-      function stopVideo() {
-        player.stopVideo();
+      function PlayVideo() {
+        player.PlayVideo();
       }
     </script>
 <span style='position:absolute; bottom: 30px!important; left: 10px!important; max-bottom: 10px!important; max-width: 170%!important; width: 22%!important; font-size: 13px; font-weight: bold;color: #ff0;'>
