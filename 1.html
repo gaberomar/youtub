@@ -1,17 +1,88 @@
 
-<meta name="robots" content="noindex, nofollow">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<style type="text/css">
-    body {
-	margin-left: 0px;
-	margin-top: 0px;
-	margin-right: 0px;
-	margin-bottom: 0px;
+
+<html>
+<head>
+<style> video {object-fit:fill}</style><style>html,body{margin:0;}</style>
+<style> .video-js {width: 100%; height: 100%;} #videojs {width: 100%; height: 100%;}</style>
+	<script type="1126e12c05e649c436a3db9f-text/javascript">
+function getParam ( sname )
+{
+  var params = location.search.substr(location.search.indexOf("?")+1);
+  var sval =  params.replace("sv=", "");
+  
+  return sval;
 }
-    </style>
-<div style="width:100%;Max-width:100%;">
-<iframe width="100%" height="98%" src="https://www.youtube.com/embed/LpYhtL-3XWA?controls=0?autoplay=1?frameborder=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen scrolling="false"></iframe>
-<span style='position:absolute; bottom: 50px!important; left: 15px!important; max-bottom: 20px!important; max-width: 170%!important; width: 22%!important; font-size: 13px; font-weight: bold;color: #ff0;'>
+var sv = getParam("sv");
+
+</script>
+  <title>Bein Sport </title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-Frame-Options" content="deny">
+
+<body>
+<div id="player" style="width:100%;height:100%;"></div>
+   <!-- 1. The <iframe> (and video player) will replace this <div> tag. -->
+ 
+  <script type="1126e12c05e649c436a3db9f-text/javascript">
+      // 2. This code loads the IFrame Player API code asynchronously.
+      var tag = document.createElement('script');
+
+      tag.src = "https://www.youtube.com/iframe_api";
+      var firstScriptTag = document.getElementsByTagName('script')[0];
+      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+      // 3. This function creates an <iframe> (and YouTube player)
+      //    after the API code downloads.
+      var player;
+      function onYouTubeIframeAPIReady() {
+        player = new YT.Player('player', {
+          height: '100%',
+            width: '100%',
+        videoId: sv,
+          playerVars: {
+            'playsinline': 1
+          },
+          events: {
+            'onReady': onPlayerReady,
+            'onStateChange': onPlayerStateChange
+          }
+        });
+      }
+
+      // 4. The API will call this function when the video player is ready.
+      function onPlayerReady(event) {
+        event.target.playVideo();
+      }
+
+      // 5. The API calls this function when the player's state changes.
+      //    The function indicates that when playing a video (state=1),
+      //    the player should play for six seconds and then stop.
+      var done = false;
+      function onPlayerStateChange(event) {
+        if (event.data == YT.PlayerState.PLAYING && !done) {
+          setTimeout(stopVideo, 6000);
+          done = true;
+        }
+      }
+      function stopVideo() {
+        player.stopVideo();
+      }
+    </script>
+<span style='position:absolute; bottom: 30px!important; left: 10px!important; max-bottom: 10px!important; max-width: 170%!important; width: 22%!important; font-size: 13px; font-weight: bold;color: #ff0;'>
 <img style= 'left: 10px!important; max-height: 50px!important; max-width: 100%!important; width: 90%!important;' src='http://1.bp.blogspot.com/-6Utq5JU_l2w/YCAo8gB0x7I/AAAAAAAALZU/YJxOQHkvIywpU4znsCgYEvIsc-U8ijY1wCK4BGAYYCw/s1600/2.png'></span>
+
+<div style="visibility:hidden">
+
+<script type="1126e12c05e649c436a3db9f-text/javascript">var _Hasync= _Hasync|| [];
+_Hasync.push(['Histats.start', '1,2829404,4,3021,130,80,00011111']);
+_Hasync.push(['Histats.fasi', '1']);
+_Hasync.push(['Histats.track_hits', '']);
+(function() {
+var hs = document.createElement('script'); hs.type = 'text/javascript'; hs.async = true;
+hs.src = ('http://s10.histats.com/js15_as.js');
+(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(hs);
+})();</script>
 </div>
-<script type="text/javascript">(function(){window['__CF$cv$params']={r:'632f28086c10ee1b',m:'f2f5f1e2243dd0559389f1fbc2b10034586ca73c-1616245572-1800-AVv9vrlVgXwkzZFCtQtOwdqqcrW10Fqm/9VWDJw+tKG7m/sr+JkDYlvboOvAyf0KPACXsyZog+WdttPeQ38oqz1QmMKeCuv9woke8Hv/LHH1S+HnrXMQdJhCFqNr8e5KI50XhBEgey5p4IZhFnr+aps=',s:[0x2bdd760aa2,0xac45e165b1],}})();</script>
+<script src="https://ajax.cloudflare.com/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="1126e12c05e649c436a3db9f-|49" defer=""></script></body>
+</body>
+</html>
